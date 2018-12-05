@@ -3669,11 +3669,14 @@ h1#accomodation-title{
 }
 
 .slide-image {
-	background-image: url(../images/engagement-88.jpg) !important;
-	transform: scale(2.5)!important;
+	background-image: url(https://gcyantis.imgix.net/engagement-95.jpg?fp-y=0&h=1920&w=1080&fit=crop&crop=focalpoint&fp-x=.67&fp-z=1.4 ) !important;
+
+	background-image: url(https://gcyantis.imgix.net/engagement-88.jpg?fp-y=.37&fp-z=1.6&fp-debug=true&h=1920&w=1080&fit=crop&crop=focalpoint&fp-x=.53) !important;
+
+	/*transform: scale(2.5)!important;
 	background-position-x: 55% !important;
 	background-position-y: top;
-	top: 33rem !important;
+	top: 33rem !important;*/
 }
 
 
