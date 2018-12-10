@@ -42,7 +42,7 @@
   		var mapOptions = {
     		zoom: 8,
 			mapTypeId: google.maps.MapTypeId.ROADMAP,
-    		center: new google.maps.LatLng(48.089162,0.3236737),
+    		center: new google.maps.LatLng(48.2434055,0.9216322),
 			panControl: true,
   			zoomControl: true,
   			mapTypeControl: true,
@@ -117,17 +117,6 @@
        		labelClass: "labels" // the CSS class for the label
      	});
 
-			var marker4 = new MarkerWithLabel({
-	       		position: new google.maps.LatLng(47.1574188,-1.6062316),
-	       		draggable: false,
-	       		raiseOnDrag: false,
-	       		icon: ' ',
-	       		map: map,
-	         	labelContent: '<div id="bus-marker" class="de-icon circle medium-size" style="background-color:#f9db85;"><i class="de-icon-airport"></i></div>',
-	       		labelAnchor: new google.maps.Point(27, 27),
-	       		labelClass: "labels" // the CSS class for the label
-	     	});
-
 
 			//INFO WINDOWS 2
 			//=======================================================================================
@@ -199,26 +188,7 @@
 			marker3_infowindow.open(map,marker3);
   		});
 
-			//INFO WINDOWS 4
-			//=======================================================================================
-			var contentString4 = ''+
-			'<div class="info-window-wrapper">'+
-				'<h6>Nantes Atlantique Airport</h6>'+
-				'<div class="info-window-desc">Take the shuttle into Nantes to catch the train to Angers.</div>'+
-				'<div class="info-window-link"><a href="https://www.raileurope.com/train-tickets/journeys/article/angers-nantes" class="grey-link with-underline" target="_blank">Train Schedule</a></div>'+
-					'</div>';
 
-			var marker4_infowindow = new google.maps.InfoWindow({
-						content: contentString4,
-				maxWidth: 200,
-				pixelOffset: new google.maps.Size(0,-10)
-				});
-
-
-			//ON MARKER CLICK EVENTS
-			google.maps.event.addListener(marker4, 'click', function() {
-				marker4_infowindow.open(map,marker4);
-				});
 
 
 		//ON BOUND EVENTS AND WINDOW RESIZE
