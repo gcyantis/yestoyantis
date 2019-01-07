@@ -1,0 +1,26 @@
+---
+title: Where To Visit
+---
+
+{% include header.html %}
+{% include slider.html title=page.title subtitle="Our Favorite Places in Richmond" image="engagement-73"  addedparams="fp-x=0&crop=focalpoint&fit=crop&fp-z=1.2"%}
+
+<section class="section-block">
+  <div class="container">
+  </div>
+</section>
+
+<section>
+<div id="map-canvas-3"></div>
+ </section>
+
+{% capture extrascripts %}
+
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTnAC_eJUxEBcpinwv2WlAvQ301HSTipw"></script>
+  <script type="text/javascript" src="js/markerlabel/markerwithlabel.js"></script>
+  <script type="text/javascript" src="js/visit-map.js"></script>
+
+{% endcapture %}
+
+{% include footer.html scripts=extrascripts%}

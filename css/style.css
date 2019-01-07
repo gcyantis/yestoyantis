@@ -214,6 +214,11 @@ h4 a:hover, h5 a:hover, h6 a:hover{
 	color:#f98d8a;
 }
 
+.scripted {
+	    font-family: bickham-script-pro-3,'Montserrat', sans-serif !important;
+	    font-weight:normal !important;
+}
+
 h1, .h1{
 	font-size:54px;
 	letter-spacing:4px;
@@ -536,10 +541,10 @@ img.rounded{
 
 #nav-menu > li > a{
 	display:inline-block;
-	padding:6px 11px;
-	margin:0 8px;
-	border:solid transparent 1px;
-	border-radius:5px;
+	padding: 0px 11px;
+	margin: 0 8px;
+	border-bottom: solid transparent 2px;
+	/* border-radius:5px; */
 }
 
 #nav-menu > li > a:hover,
@@ -2200,8 +2205,8 @@ a.de-button.medium, span.de-button.medium, input[type=submit].medium{
 }
 
 a.de-button.large, span.de-button.large, input[type=submit].large{
-	padding:15px 60px;
-	font-size:12px;
+	    padding: 25px 60px;
+    font-size: 36px;
 }
 
 /* ----------------------------------------------*/
@@ -3069,7 +3074,7 @@ footer .image-divider.fixed-height{
 /* ----------------------------------------------*/
 #save-date{
 	font-family: bickham-script-pro-3, 'Great Vibes', cursive;
-	font-size:54px;
+	font-size:74px;
 }
 
 /* ----------------------------------------------*/

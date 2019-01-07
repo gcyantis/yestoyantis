@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Wedding Recommendations</name>
+    <description/>
+    <Style id="icon-1502-097138-nodesc-normal">
+      <IconStyle>
+        <color>ff387109</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1502-097138-nodesc-highlight">
+      <IconStyle>
+        <color>ff387109</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1502-097138-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1502-097138-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1502-097138-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1577-0288D1-nodesc-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1577-0288D1-nodesc-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1577-0288D1-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1577-0288D1-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1577-0288D1-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Places to Eat</name>
+      <Placemark>
+        <name>Proper Pie Co.</name>
+        <styleUrl>#icon-1577-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -77.418645,37.531405,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>The Hill Cafe</name>
+        <styleUrl>#icon-1577-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -77.4158081,37.5300396,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Union Market</name>
+        <styleUrl>#icon-1577-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -77.4179205,37.5350907,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Alamo BBQ</name>
+        <styleUrl>#icon-1577-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -77.4195112,37.5350197,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Things to See</name>
+      <Placemark>
+        <name>Chimborazo Park</name>
+        <styleUrl>#icon-1502-097138-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -77.4117976,37.5257497,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Libby Hill Park</name>
+        <styleUrl>#icon-1502-097138-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -77.417468,37.526515,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Jefferson Park</name>
+        <styleUrl>#icon-1502-097138-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -77.4216352,37.5353664,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Church Hill Overlook</name>
+        <styleUrl>#icon-1502-097138-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -77.4227028,37.5326965,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[St. John's Church]]></name>
+        <styleUrl>#icon-1502-097138-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -77.4196793,37.5313179,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
