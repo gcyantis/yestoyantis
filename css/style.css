@@ -3004,8 +3004,9 @@ footer .image-divider.fixed-height{
 /* ----------------------------------------------*/
 .story-row.row {
     display: table;
-	padding:50px 0;
+	padding:0 0;
 	position:relative;
+	width:100%
 }
 
 .story-row.row [class*="col-"] {
@@ -3043,6 +3044,7 @@ footer .image-divider.fixed-height{
 	line-height:20px;
 	font-weight:400;
 	color:#FFF;
+	padding-top:30px;
 }
 
 .vertical-line{
