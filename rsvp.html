@@ -1,13 +1,131 @@
 ---
-layout: default
 title: RSVP
 ---
 
 
-{% include slider.html title=page.title subtitle="" image="engagement-64" addedparams="fp-x=1&fp-y=1&crop=focalpoint&fit=crop&fp-z=1.2"%}
+{% include header.html %}
+
+{% include slider.html title=page.title subtitle="Hope to hear from you soon!" image="engagement-64" addedparams="fp-x=1&fp-y=1&crop=focalpoint&fit=crop&fp-z=1.2"%}
 
 <section class="section-block">
   <div class="container">
+    <form id="submit-to-google-sheet" name="submit-to-google-sheet">
+      <div class="row text-center">
+        <h2>Please RSVP by March 20th!</h2>
+      </div>
+      <h3>Are you going to make it?</h3>
 
+      <div class="form-group">
+        <label for="names">Who all is attending in your party?</label>
+        <div class="input-group">
+        <div class="input-group-addon"><i class="de-icon-user"></i></div>
+          <input type="text" id="names" name="names" class="form-control ajax-input" placeholder="Rachel, Colin" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Will you be joining us?</label>
+        <div>
+          <div class="radio">
+            <label class="option-label">
+              <input type="radio" class="attending" name="attending" value="yes">
+              Yes!
+            </label>
+          </div>
+          <div class="radio">
+            <label class="option-label">
+              <input type="radio" class="attending" name="attending" value="no">
+              No
+            </label>
+          </div>
+        </div>
+      </div>
+
+    <div id="isattending" style="display:none;">
+      <h3>A couple more questions then:</h3>
+
+      <div class="form-group">
+        <label>Do you plan on riding the bus from Linden Row Inn to the event and back?</label>
+        <div>
+          <div class="radio">
+            <label class="option-label">
+              <input type="radio" name="bus" value="yes">
+              Yes
+            </label>
+          </div>
+          <div class="radio">
+            <label class="option-label">
+              <input type="radio"name="bus" value="no">
+              No
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="diets">Dietary restrictions and allergies</label>
+        <textarea id="diets" name="diets" class="form-control ajax-input" placeholder="I'm a fruitarian." rows="5"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="music">A song that will definitely have you on the dance floor</label>
+        <div class="input-group">
+        <div class="input-group-addon"><i class="de-icon-music-1"></i></div>
+          <input type="text" id="music" name="music" class="form-control ajax-input" placeholder="Love Story, Taylor Swift (2008)">
+        </div>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-md-12 text-center animation fadeInUp">
+          <div class="form-group">
+            <input type="submit" id="submitButton"  name="submitButton" class="de-button small" value="SUBMIT">
+          </div>
+        </div>
+      </div>
+
+    </form>
   </div>
 </section>
+
+{% capture extrascripts %}
+
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyoWve_ZjojTfljuQWjhXTh2KO5ozRfOHxnOlYgyehE--rI8G8/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  $(document).ready(function() {
+    $('.attending').change(function() {
+      if ($(this).val() === 'yes') 	$('#isattending').show();
+      else $('#isattending').hide();
+
+      $(window).data('plugin_stellar').destroy();
+      $(window).data('plugin_stellar').init();
+    });
+  });
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    //console.log($('#submit-to-google-sheet').serialize());
+
+    response = {}
+    fields = ['names','attending','bus','diets','bus'];
+    for (i=0;i<fields.length;i++) {
+      response[fields[i]] = $("[name="+fields[i]+"]").val();
+    }
+
+    $.post(scriptURL, response)
+      .done(function(d) {
+          console.log('Success!', d);
+          $(location).attr('href','thanks.html');
+      })
+      .fail(function(d) {
+          console.log('Error!', d)
+      });
+  })
+
+</script>
+
+{% endcapture %}
+
+{% include footer.html scripts=extrascripts%}
