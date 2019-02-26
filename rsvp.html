@@ -109,12 +109,14 @@ title: RSVP
     //console.log($('#submit-to-google-sheet').serialize());
 
     response = {}
-    fields = ['names','attending','bus','diets','bus'];
+    fields = ['names','diets','music'];
     for (i=0;i<fields.length;i++) {
       response[fields[i]] = $("[name="+fields[i]+"]").val();
     }
+    response['attending'] = getCheckValues('attending');
+    response['bus'] = getCheckValues('bus');
 
-    $.post(scriptURL, response)
+    $.get(scriptURL, response)
       .done(function(d) {
           console.log('Success!', d);
           $(location).attr('href','thanks.html');
@@ -123,6 +125,10 @@ title: RSVP
           console.log('Error!', d)
       });
   })
+
+  function getCheckValues(name) {
+    return $("input[name="+name+"]:checked").map(function() {return this.value;}).get().join(", ");
+  }
 
 </script>
 
