@@ -1,0 +1,57 @@
+---
+layout: default
+title: Gallery
+---
+
+{% include slider.html title=page.title subtitle="Look how good we looked!" image="WEDDING_0488" addedparams="fp-x=1&fp-y=1&crop=focalpoint&fit=crop&fp-z=1.1"%}
+
+<!--CONTENT SECTION-->
+<section id="content">
+	<section id="attending-section" class="section-block more-grey">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10 text-center">
+					<h2 class="h4 animation fadeInUp">Thank you for joining us!</h2>
+					<p class="intro-text animation fadeInUp">We had the most amazing time celebrating with you. We've picked some of our favorite pictures to show off. The button below will take you to the photographers gallery with all 820 pictures if you would like to find all those great shots of yourselves. Feel free to download your favorites! (Rachel says "Use #yestoyantis when posting! Please and thanks!")</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8 text-center">
+					<a href="https://88lovestories.client-gallery.com/gallery/the-wedding-of-rachel-and-colin" class="de-button medium rounded animation fadeInUp">
+											Full Gallery
+									</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--GALLERY SECTION-->
+	<section id="gallery-section" class="section-block more-grey">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-12">
+
+					<!-- START MASONRY -->
+					<div id="masonry-gallery" class="masonry three-col with-gutter">
+
+						<!-- MASONRY GRID SIZER -->
+						<div class="grid-sizer"></div>
+
+						<!-- MASONRY GUTTER SIZER -->
+						<div class="gutter-sizer"></div>
+
+						{% for image in site.data.images %}
+							{% include galleryItem.html image=image.name %}
+						{% endfor %}
+
+					</div>
+					<!-- END of MASONRY-->
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- END of GALLERY SECTION-->
+
+</section>

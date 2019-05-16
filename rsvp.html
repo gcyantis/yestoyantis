@@ -116,14 +116,14 @@ title: RSVP
     response['attending'] = getCheckValues('attending');
     response['bus'] = getCheckValues('bus');
 
-    $.get(scriptURL, response)
-      .done(function(d) {
-          console.log('Success!', d);
-          $(location).attr('href','thanks.html');
-      })
-      .fail(function(d) {
-          console.log('Error!', d)
-      });
+    //$.get(scriptURL, response)
+      //.done(function(d) {
+          //console.log('Success!', d);
+          //$(location).attr('href','thanks.html');
+      //})
+      //.fail(function(d) {
+          //console.log('Error!', d)
+      //});
   })
 
   function getCheckValues(name) {

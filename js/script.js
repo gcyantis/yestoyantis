@@ -484,7 +484,7 @@
 	//================================================================================
 	var theday = new Date();
 	theday = new Date(2019, 3, 27, 16, 30);
-	$('.countdown').countdown({until: theday, format: 'DHMS'});
+	$('.countdown').countdown({since: theday, format: 'DHMS'});
 
 
 	// 06.3 Gift Carousel
